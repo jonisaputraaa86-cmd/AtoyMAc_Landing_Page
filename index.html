@@ -12,48 +12,64 @@
   <header class="bg-red-600 text-white p-4 shadow-md fixed top-0 w-full z-50">
     <div class="container mx-auto flex justify-between items-center">
       <h1 class="text-xl font-bold">AtoyMac Store</h1>
-      <nav class="space-x-4">
+      <!-- Tombol Hamburger -->
+      <button class="md:hidden" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-6">
         <a href="#services" class="hover:text-gray-200">Layanan</a>
         <a href="#products" class="hover:text-gray-200">Produk</a>
         <a href="#testimoni" class="hover:text-gray-200">Testimoni</a>
         <a href="#lokasi" class="hover:text-gray-200">Lokasi</a>
       </nav>
     </div>
+    <!-- Menu Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden mt-3 space-y-2 text-center">
+      <a href="#services" class="block hover:text-gray-200">Layanan</a>
+      <a href="#products" class="block hover:text-gray-200">Produk</a>
+      <a href="#testimoni" class="block hover:text-gray-200">Testimoni</a>
+      <a href="#lokasi" class="block hover:text-gray-200">Lokasi</a>
+    </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8');">
-    <div class="bg-black bg-opacity-50 p-10 rounded-xl">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Solusi Terbaik untuk MacBook Anda</h2>
-      <p class="text-gray-200 mb-6">Mac Store & Service || Apple Device Speciallist</p>
+  <section class="relative min-h-[70vh] flex items-center justify-center text-center bg-cover bg-center pt-20"
+    style="background-image: url('https://images.unsplash.com/photo-1517336714731-489689fd1ca8');">
+    <div class="bg-black bg-opacity-50 p-6 md:p-10 rounded-xl mx-4">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Solusi Terbaik untuk MacBook Anda</h2>
+      <p class="text-gray-200 mb-6 text-sm md:text-base">Mac Store & Service || Apple Device Speciallist</p>
       <a href="#booking" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full transition">Booking Sekarang</a>
     </div>
   </section>
 
   <!-- Services -->
-  <section id="services" class="py-20 bg-white">
+  <section id="services" class="py-16 bg-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
       <h3 class="text-3xl font-semibold mb-12">Layanan Kami</h3>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
           <img src="https://img.icons8.com/ios-filled/50/991B1B/maintenance.png" alt="Hardware" class="mx-auto mb-4">
-          <h4 class="text-xl font-bold mb-2">Perbaikan Hardware</h4>
-          <p class="text-gray-600">Kami dapat menangani semua masalah perangkat keras.</p>
+          <h4 class="text-lg font-bold mb-2">Perbaikan Hardware</h4>
+          <p class="text-gray-600 text-sm">Kami dapat menangani semua masalah perangkat keras.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
           <img src="https://img.icons8.com/ios-filled/50/991B1B/software-box.png" alt="Software" class="mx-auto mb-4">
-          <h4 class="text-xl font-bold mb-2">Perbaikan Software</h4>
-          <p class="text-gray-600">Perbaikan sistem operasi dan aplikasi MacBook Anda.</p>
+          <h4 class="text-lg font-bold mb-2">Perbaikan Software</h4>
+          <p class="text-gray-600 text-sm">Perbaikan sistem operasi dan aplikasi MacBook Anda.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
           <img src="ssd.png" alt="Battery" class="mx-auto mb-4">
-          <h4 class="text-xl font-bold mb-2">Upgrade SSD & RAM</h4>
-          <p class="text-gray-600">Kami dapat membantu Upgrade RAM & SSD pada MacBook Anda.</p>
+          <h4 class="text-lg font-bold mb-2">Upgrade SSD & RAM</h4>
+          <p class="text-gray-600 text-sm">Kami dapat membantu Upgrade RAM & SSD pada MacBook Anda.</p>
         </div>
         <div class="bg-gray-50 p-6 rounded-xl shadow hover:shadow-lg transition">
           <img src="https://img.icons8.com/ios-filled/50/991B1B/security-checked.png" alt="Garansi" class="mx-auto mb-4">
-          <h4 class="text-xl font-bold mb-2">Perlindungan</h4>
-          <p class="text-gray-600">Jaminan garansi resmi untuk layanan kami.</p>
+          <h4 class="text-lg font-bold mb-2">Perlindungan</h4>
+          <p class="text-gray-600 text-sm">Jaminan garansi resmi untuk layanan kami.</p>
         </div>
       </div>
     </div>
@@ -61,13 +77,13 @@
 
   <!-- Produk & Accessories Section -->
   <section id="products" class="py-16 bg-gray-100">
-    <div class="container mx-auto text-center">
+    <div class="container mx-auto text-center px-4">
       <h3 class="text-3xl font-bold mb-10">Produk & Aksesoris</h3>
-      <div class="grid md:grid-cols-2 gap-8">
+      <div class="grid md:grid-cols-2 gap-6">
         <!-- Apple Products -->
         <div class="p-6 bg-white shadow-lg rounded-xl cursor-pointer" onclick="toggleDropdown('appleProducts')">
-          <h4 class="text-2xl font-semibold">Apple Products</h4>
-          <div id="appleProducts" class="hidden mt-4 grid md:grid-cols-2 gap-4">
+          <h4 class="text-xl font-semibold">Apple Products</h4>
+          <div id="appleProducts" class="hidden mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="p-4 border rounded-xl">
               <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8" class="w-full h-32 object-cover rounded-md mb-2" alt="MacBook"/>
               <p>MacBook</p>
@@ -81,7 +97,7 @@
               <p>iPhone</p>
             </div>
             <div class="p-4 border rounded-xl">
-              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" class="w-full h-32 object-cover rounded-md mb-2" alt="iWatch"/>
+              <img src="case.png" class="w-full h-32 object-cover rounded-md mb-2" alt="iWatch"/>
               <p>iWatch</p>
             </div>
           </div>
@@ -89,8 +105,8 @@
 
         <!-- Accessories -->
         <div class="p-6 bg-white shadow-lg rounded-xl cursor-pointer" onclick="toggleDropdown('accessories')">
-          <h4 class="text-2xl font-semibold">Accessories</h4>
-          <div id="accessories" class="hidden mt-4 grid md:grid-cols-2 gap-4">
+          <h4 class="text-xl font-semibold">Accessories</h4>
+          <div id="accessories" class="hidden mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div class="p-4 border rounded-xl">
               <img src="MAGSAFE.webp" class="w-full h-32 object-cover rounded-md mb-2" alt=""/>
               <p>MagSafe</p>
@@ -115,18 +131,18 @@
 
   <!-- Testimoni -->
   <section id="testimoni" class="py-16 bg-white">
-    <div class="container mx-auto text-center">
+    <div class="container mx-auto px-4 text-center">
       <h3 class="text-3xl font-bold mb-10">Apa Kata Pelanggan</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="p-6 shadow-lg rounded-xl">
+      <div class="flex md:grid md:grid-cols-3 gap-6 overflow-x-auto snap-x">
+        <div class="min-w-[250px] md:min-w-0 p-6 shadow-lg rounded-xl snap-center bg-white">
           <p>“Pelayanan cepat dan hasil memuaskan, MacBook saya kembali normal.”</p>
           <h4 class="font-semibold mt-4">– Andi</h4>
         </div>
-        <div class="p-6 shadow-lg rounded-xl">
+        <div class="min-w-[250px] md:min-w-0 p-6 shadow-lg rounded-xl snap-center bg-white">
           <p>“Teknisi ramah dan profesional, recommended banget!”</p>
           <h4 class="font-semibold mt-4">– Sinta</h4>
         </div>
-        <div class="p-6 shadow-lg rounded-xl">
+        <div class="min-w-[250px] md:min-w-0 p-6 shadow-lg rounded-xl snap-center bg-white">
           <p>“Harga sesuai dan ada garansi, sangat terpercaya.”</p>
           <h4 class="font-semibold mt-4">– Budi</h4>
         </div>
@@ -136,11 +152,11 @@
   </section>
 
  <!-- Location -->
-  <section id="location" class="py-20 bg-white text-center">
+  <section id="lokasi" class="py-16 bg-gray-100 text-center">
     <div class="max-w-6xl mx-auto px-6">
       <h3 class="text-3xl font-semibold mb-6">Lokasi Kami</h3>
       <p class="text-gray-600 mb-6">Kunjungi service center MacFix di alamat kami.</p>
-      <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
+      <div class="w-full h-80 rounded-lg overflow-hidden shadow-lg">
         <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3951.642825505967!2d112.6001339!3d-7.9323214!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7883362f1b19e9%3A0x5375a0157fc0bb79!2sAtoyMac%20(%20MACBOOK%20STORE%20%26%20SERVICE%20)!5e0!3m2!1sen!2sid!4v1757147905137!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
@@ -148,7 +164,7 @@
 
   <!-- Booking Form -->
   <section id="booking" class="py-16 bg-white">
-    <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center">
+    <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center px-4">
       <div>
         <h3 class="text-3xl font-bold mb-6">Booking Service</h3>
         <form class="space-y-4">
